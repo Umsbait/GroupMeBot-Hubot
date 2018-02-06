@@ -113,7 +113,7 @@ module.exports = (robot) ->
     else
       res.send "Could not find a user by the name #{target}"
 
-  robot.hear /(.*)@all(.*)/i, (res) ->
+  robot.hear /(.*)@all/i, (res) ->
     """@all command"""
     text = res.match[0]
     users = robot.brain.users()
